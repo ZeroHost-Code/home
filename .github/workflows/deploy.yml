@@ -18,6 +18,6 @@ jobs:
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             cd ${{ secrets.HOME_PATH }}
-            git pull
+            git pull origin main
             pm2 stop main-web
             pm2 start main-web
