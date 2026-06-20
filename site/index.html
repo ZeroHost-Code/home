@@ -82,7 +82,15 @@
         "name": "ZeroHost",
         "description": "Free hosting for NodeJS, Python, Java, Rust, Gitea, Uptime Kuma and more",
         "publisher": { "@id": "https://zero-host.org/#organization" },
-        "inLanguage": "en"
+        "inLanguage": "en",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://zero-host.org/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "WebPage",
@@ -127,6 +135,17 @@
         }
       },
       {
+        "@type": "SiteNavigationElement",
+        "@id": "https://zero-host.org/#navigation",
+        "name": ["Features", "Languages", "Pricing", "FAQ"],
+        "url": [
+          "https://zero-host.org/#features",
+          "https://zero-host.org/#supported",
+          "https://zero-host.org/#pricing",
+          "https://zero-host.org/#faq"
+        ]
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -168,6 +187,38 @@
               "@type": "Answer",
               "text": "Reasonable limits are applied to ensure a good experience for all users. The precise details are available after registration in the Pterodactyl panel."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I host a Discord bot on ZeroHost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ZeroHost supports hosting Discord bots written in NodeJS (discord.js), Python (discord.py), and Java. Deploy your bot in seconds for free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ZeroHost offer free hosting for game servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can host game servers including Minecraft Java Edition on ZeroHost for free. Powered by Pterodactyl with 400+ Mbit/s bandwidth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the bandwidth limit on free hosting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each free hosting plan includes 400+ Mbit/s bandwidth with no strict data transfer caps, ensuring a smooth experience for your applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is ZeroHost different from other free hosting providers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ZeroHost offers truly free hosting with no hidden paid plans, no credit card required, 400+ Mbit/s bandwidth, support for many languages including NodeJS, Python, Java, Rust, and a Pterodactyl-based panel for easy management."
+            }
           }
         ]
       }
@@ -185,9 +236,9 @@
   <canvas id="particles-canvas"></canvas>
 
   <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#" class="logo" id="logo-link">
+      <a href="/" class="logo" id="logo-link">
         <span class="logo-icon">
           <img src="https://status.zero-host.org/upload/logo1.png?t=1781280015614" alt="ZeroHost" width="32" height="32">
         </span>
@@ -202,7 +253,7 @@
       </ul>
 
       <div class="nav-actions">
-        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="btn btn-primary" id="nav-dashboard-btn">
+        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="nav-dashboard-btn">
           Dashboard →
         </a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -211,6 +262,9 @@
       </div>
     </div>
   </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
@@ -238,7 +292,7 @@
       </p>
 
       <div class="hero-cta">
-        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="hero-dashboard-btn">
+        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="hero-dashboard-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="7" height="7" rx="1"/>
             <rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -366,7 +420,7 @@
 
         <div class="tech-card" id="tech-nodejs">
           <div class="tech-icon tech-icon--green" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Free Node.js hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Free Node.js hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Node.js</h4>
           <p class="tech-desc">Free NodeJS hosting for Discord bots, REST APIs, Express apps, Next.js, and more.</p>
@@ -375,7 +429,7 @@
 
         <div class="tech-card" id="tech-python">
           <div class="tech-icon tech-icon--blue" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Free Python hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Free Python hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Python</h4>
           <p class="tech-desc">Free Python hosting for scripts, bots, Flask/FastAPI APIs, scraping, automation and AI.</p>
@@ -384,7 +438,7 @@
 
         <div class="tech-card" id="tech-java">
           <div class="tech-icon tech-icon--orange" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Free Java hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Free Java hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Java</h4>
           <p class="tech-desc">Free Java hosting for Minecraft servers, Spring Boot APIs, JVM applications of all kinds.</p>
@@ -393,7 +447,7 @@
 
         <div class="tech-card" id="tech-rust">
           <div class="tech-icon tech-icon--red" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/rust/0f172a" alt="Free Rust hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.simpleicons.org/rust/0f172a" alt="Free Rust hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Rust</h4>
           <p class="tech-desc">Free Rust hosting for high-performance services, Actix/Axum APIs, compiled system tools.</p>
@@ -402,7 +456,7 @@
 
         <div class="tech-card" id="tech-uptime">
           <div class="tech-icon tech-icon--teal" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/uptimekuma/5cdd8b" alt="Free Uptime Kuma hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.simpleicons.org/uptimekuma/5cdd8b" alt="Free Uptime Kuma hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Uptime Kuma</h4>
           <p class="tech-desc">Free Uptime Kuma hosting for service monitoring, custom alerts and public status page.</p>
@@ -411,7 +465,7 @@
 
         <div class="tech-card" id="tech-gitea">
           <div class="tech-icon tech-icon--purple" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/gitea/609926" alt="Free Gitea hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.simpleicons.org/gitea/609926" alt="Free Gitea hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Gitea</h4>
           <p class="tech-desc">Free Gitea hosting: your own Git forge with repositories, CI/CD, issues, pull requests.</p>
@@ -420,7 +474,7 @@
 
         <div class="tech-card" id="tech-forgejo">
           <div class="tech-icon tech-icon--orange" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/forgejo/fb923c" alt="Free Forgejo hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.simpleicons.org/forgejo/fb923c" alt="Free Forgejo hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Forgejo</h4>
           <p class="tech-desc">Free Forgejo hosting: a community-managed lightweight software forge, fork of Gitea.</p>
@@ -429,7 +483,7 @@
 
         <div class="tech-card" id="tech-bun">
           <div class="tech-icon tech-icon--pink" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="Free Bun hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="Free Bun hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Bun</h4>
           <p class="tech-desc">Free Bun hosting for blazing fast JavaScript/TypeScript runtime, bundler, test runner and package manager.</p>
@@ -438,7 +492,7 @@
 
         <div class="tech-card" id="tech-codeserver">
           <div class="tech-icon tech-icon--blue" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="Free Code-Server hosting - ZeroHost" width="48" height="48">
+            <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="Free Code-Server hosting - ZeroHost" width="48" height="48" loading="lazy">
           </div>
           <h4 class="tech-name">Code-Server</h4>
           <p class="tech-desc">Free Code-Server hosting: VS Code in the browser with full IDE features, extensions and terminal.</p>
@@ -476,7 +530,7 @@
           The free Pterodactyl panel gives you access to a real-time console,
           file management, environment variables and much more.
         </p>
-          <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="btn btn-primary" id="terminal-dashboard-btn" style="width: fit-content; margin-top: 1.5rem;">
+          <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="terminal-dashboard-btn" style="width: fit-content; margin-top: 1.5rem;">
             Open Dashboard
           </a>
         </div>
@@ -552,7 +606,7 @@
             </li>
           </ul>
 
-          <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="btn btn-primary btn-full" id="pricing-cta-btn">
+          <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" id="pricing-cta-btn">
             Get started for free
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -642,7 +696,7 @@
         <div class="cta-glow"></div>
         <h2 class="cta-title">Ready to deploy your project for free?</h2>
         <p class="cta-subtitle">Join ZeroHost and start free hosting in minutes. NodeJS, Python, Java, Rust — all $0.</p>
-        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-glow" id="final-cta-btn">
+        <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-glow" id="final-cta-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="7" height="7" rx="1"/>
             <rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -655,12 +709,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="logo" id="footer-logo">
+          <a href="/" class="logo" id="footer-logo">
             <span class="logo-icon">
               <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
                 <rect width="32" height="32" rx="8" fill="url(#footerLogoGrad)"/>
@@ -689,9 +745,9 @@
           </div>
           <div class="footer-col">
             <h5 class="footer-col-title">Links</h5>
-            <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener" class="footer-link" id="footer-dashboard-link">Dashboard</a>
-            <a href="https://panel.zero-host.org" target="_blank" rel="noopener" class="footer-link">Pterodactyl</a>
-            <a href="https://status.zero-host.org" target="_blank" rel="noopener" class="footer-link">Status Page</a>
+            <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="footer-link" id="footer-dashboard-link">Dashboard</a>
+            <a href="https://panel.zero-host.org" target="_blank" rel="noopener noreferrer" class="footer-link">Pterodactyl</a>
+            <a href="https://status.zero-host.org" target="_blank" rel="noopener noreferrer" class="footer-link">Status Page</a>
           </div>
           <div class="footer-col">
             <h5 class="footer-col-title">Legal</h5>
@@ -703,7 +759,7 @@
 
       <div class="footer-bottom">
         <p class="footer-copy">&copy; <span id="copyright-year">2025</span> ZeroHost — Free hosting for everyone.</p>
-        <a href="https://status.zero-host.org" target="_blank" rel="noopener" class="footer-status">
+        <a href="https://status.zero-host.org" target="_blank" rel="noopener noreferrer" class="footer-status">
           <span class="status-dot"></span>
           All systems operational
         </a>

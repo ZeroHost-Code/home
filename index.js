@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "site", "index.html"));
 });
 
+// Page 404 personnalisée
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, "site", "404.html"));
+});
+
 app.listen(PORT, () => {
     console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
