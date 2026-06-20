@@ -21,5 +21,6 @@ jobs:
             git fetch origin main
             git clean -fd -e ads.txt -e robots.txt
             git reset --hard origin/main
+            npm install
             pm2 stop main-web
             pm2 start main-web
