@@ -262,9 +262,9 @@ body {
 /* ---------- NAVBAR ---------- */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 16px;
+  left: 24px;
+  right: 24px;
   z-index: 100;
   height: var(--navbar-h);
   display: flex;
@@ -272,12 +272,15 @@ body {
   background: transparent;
   transition: all var(--transition);
   padding: 0 24px;
+  border-radius: 16px;
 }
 
 .navbar.scrolled {
-  padding: 0 80px;
+  left: 40px;
+  right: 40px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border-radius: 14px;
 }
 
 .nav-container {
