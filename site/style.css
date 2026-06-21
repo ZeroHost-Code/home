@@ -283,8 +283,6 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 14px;
-  width: calc(100% - 240px);
-  max-width: 800px;
 }
 
 .navbar.scrolled .logo,
