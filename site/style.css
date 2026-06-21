@@ -387,11 +387,12 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: calc(var(--navbar-h) - 10px) 80px 80px clamp(320px, 22vw, 520px);
+  padding: calc(var(--navbar-h) - 10px) 80px 80px clamp(100px, 15vw, 520px);
   overflow: hidden;
   background: #000;
 }
@@ -1347,9 +1348,10 @@ body {
   .feature-card--large { grid-column: 1; }
 
   .hero {
-    padding: calc(var(--navbar-h) - 10px) 24px 48px 24px;
+    padding: calc(var(--navbar-h) + 16px) 24px 32px 24px;
     text-align: center;
     justify-content: center;
+    min-height: auto;
   }
 
   .hero-title {
