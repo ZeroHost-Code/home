@@ -386,6 +386,7 @@ body {
   z-index: 1;
   max-width: 820px;
   margin: 0;
+  padding-left: clamp(24px, 6vw, 80px);
 }
 
 .hero-badge {
