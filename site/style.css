@@ -283,6 +283,10 @@ body {
   border-radius: 14px;
 }
 
+.navbar.scrolled .nav-container {
+  transform: translateX(-30px);
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -291,6 +295,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  transition: transform var(--transition);
 }
 
 .logo {
