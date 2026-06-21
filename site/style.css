@@ -269,8 +269,8 @@ body {
   transform: translateX(-50%);
   z-index: 100;
   height: var(--navbar-h);
-  width: calc(100% - 48px);
-  max-width: 1200px;
+  width: calc(100% - 96px);
+  max-width: 1000px;
   display: flex;
   align-items: center;
   background: transparent;
