@@ -37,7 +37,7 @@
   --glow-purple:  rgba(238, 129, 50, 0.12);
 
   /* Sizing */
-  --navbar-h: 72px;
+  --navbar-h: 56px;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -263,10 +263,12 @@ body {
 .navbar {
   position: fixed;
   top: 16px;
-  left: 24px;
-  right: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
   height: var(--navbar-h);
+  width: calc(100% - 48px);
+  max-width: 1200px;
   display: flex;
   align-items: center;
   background: transparent;
@@ -276,8 +278,6 @@ body {
 }
 
 .navbar.scrolled {
-  left: 40px;
-  right: 40px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 14px;
