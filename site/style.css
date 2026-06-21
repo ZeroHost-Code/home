@@ -1309,7 +1309,7 @@ body {
   .terminal-sidebar .btn { margin: 1.5rem auto 0; }
 
   .hero {
-    padding: calc(var(--navbar-h) + 48px) 48px 60px clamp(200px, 18vw, 400px);
+    padding: calc(var(--navbar-h) + 72px) 48px 60px clamp(200px, 18vw, 400px);
   }
 
   .hero-title {
