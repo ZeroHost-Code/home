@@ -354,7 +354,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: calc(var(--navbar-h) + 40px) 80px 80px clamp(200px, 15vw, 380px);
+  padding: calc(var(--navbar-h) + 40px) 80px 80px clamp(280px, 20vw, 450px);
   overflow: hidden;
 }
 
