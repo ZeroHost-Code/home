@@ -207,6 +207,11 @@ body {
   box-shadow: 0 8px 32px rgba(238, 129, 50, 0.5);
 }
 
+#nav-dashboard-btn {
+  background: #433b32;
+  border: 1px solid #fff1e0;
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-secondary);
