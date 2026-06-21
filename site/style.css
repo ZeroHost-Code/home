@@ -379,15 +379,6 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, black 30%, transparent 80%);
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 55% at 50% -5%, rgba(238, 129, 50, 0.08) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 40% at 75% 55%, rgba(238, 129, 50, 0.05) 0%, transparent 70%),
-    linear-gradient(180deg, transparent 40%, var(--bg-primary) 100%);
-  z-index: 0;
-}
 
 .hero-content {
   position: relative;
