@@ -44,7 +44,7 @@
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 130) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(99, 102, 241, ${0.12 * (1 - dist / 130)})`;
+          ctx.strokeStyle = `rgba(238, 129, 50, ${0.1 * (1 - dist / 130)})`;
           ctx.lineWidth = 0.6;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
@@ -57,8 +57,8 @@
     particles.forEach(p => {
       ctx.beginPath();
       const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 2);
-      grad.addColorStop(0, `rgba(99, 102, 241, ${p.alpha})`);
-      grad.addColorStop(1, `rgba(99, 102, 241, 0)`);
+      grad.addColorStop(0, `rgba(238, 129, 50, ${p.alpha})`);
+      grad.addColorStop(1, `rgba(238, 129, 50, 0)`);
       ctx.fillStyle = grad;
       ctx.arc(p.x, p.y, p.r * 2, 0, Math.PI * 2);
       ctx.fill();
@@ -105,25 +105,23 @@
 
 /* ---------- SCROLL REVEAL ---------- */
 (function () {
-  const elements = document.querySelectorAll(
-    '.feature-card, .tech-card, .faq-item, .pricing-card, .terminal-wrapper, .cta-box, .section-header'
-  );
+  const sections = document.querySelectorAll('.section, .cta-section');
 
-  elements.forEach(el => el.classList.add('reveal'));
+  sections.forEach(el => el.classList.add('reveal'));
 
   const observer = new IntersectionObserver(
     entries => {
-      entries.forEach((entry, i) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.08 }
+    { threshold: 0.05 }
   );
 
-  elements.forEach(el => observer.observe(el));
+  sections.forEach(el => observer.observe(el));
 })();
 
 /* ---------- FAQ ACCORDION ---------- */
