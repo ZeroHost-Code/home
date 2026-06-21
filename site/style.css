@@ -127,13 +127,11 @@ body {
 
 /* ---------- SECTION DIVIDER ---------- */
 .section-divider {
-  width: 100%;
+  width: 240px;
   height: 1px;
   background: #a04a0d;
   border: none;
-  margin: 0;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%);
+  margin: 0 auto;
 }
 
 /* ---------- GRADIENT TEXT ---------- */
