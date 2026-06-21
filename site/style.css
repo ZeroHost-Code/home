@@ -264,6 +264,10 @@ body {
   justify-content: center;
 }
 
+#final-cta-btn {
+  box-shadow: none;
+}
+
 .btn-glow {
   animation: btnPulse 3s ease-in-out infinite;
 }
