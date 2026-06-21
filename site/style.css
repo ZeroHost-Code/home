@@ -355,7 +355,7 @@ body {
   background-image:
     linear-gradient(rgba(238, 129, 50, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(238, 129, 50, 0.05) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-size: 24px 24px;
   mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, black 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, black 30%, transparent 80%);
 }
