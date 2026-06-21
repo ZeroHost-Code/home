@@ -1020,7 +1020,7 @@ body {
 .cta-box {
   position: relative;
   text-align: center;
-  background: rgba(28, 25, 23, 0.6);
+  background: linear-gradient(180deg, rgba(28, 25, 23, 0.6) 0%, rgba(50, 48, 46, 0.5) 100%);
   border: 1px solid rgba(238, 129, 50, 0.3);
   border-radius: var(--radius-xl);
   padding: 80px 40px;
