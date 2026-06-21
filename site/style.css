@@ -129,9 +129,11 @@ body {
 .section-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(160, 74, 13, 0) 0%, #a04a0d 50%, rgba(160, 74, 13, 0) 100%);
+  background: #a04a0d;
   border: none;
   margin: 0;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%);
 }
 
 /* ---------- GRADIENT TEXT ---------- */
