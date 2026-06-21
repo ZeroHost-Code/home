@@ -428,7 +428,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-size: 6rem;
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.03em;
