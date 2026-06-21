@@ -1348,6 +1348,10 @@ body {
 
   .hamburger { display: flex; }
 
+  .nav-container {
+    justify-content: space-between;
+  }
+
   #nav-dashboard-btn { display: none; }
 
   .nav-mobile-dashboard {
