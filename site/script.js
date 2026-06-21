@@ -276,7 +276,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     container.textContent = '';
     for (var i = 0; i < word.length; i++) {
       var span = document.createElement('span');
-      span.className = 'word-rotator__letter gradient-text';
+      span.className = 'word-rotator__letter';
       span.textContent = word[i];
       if (word[i] === ' ') span.innerHTML = '&nbsp;';
       container.appendChild(span);
