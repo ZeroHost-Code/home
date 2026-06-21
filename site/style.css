@@ -378,7 +378,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: calc(var(--navbar-h) + 40px) 80px 80px clamp(320px, 22vw, 520px);
+  padding: calc(var(--navbar-h) + 10px) 80px 80px clamp(320px, 22vw, 520px);
   overflow: hidden;
   background: #000;
 }
