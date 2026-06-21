@@ -362,6 +362,10 @@ body {
   background: rgba(238, 129, 50, 0.1);
 }
 
+.nav-mobile-dashboard {
+  display: none;
+}
+
 .nav-actions { display: flex; align-items: center; gap: 12px; transition: transform var(--transition); }
 
 .hamburger {
@@ -1344,11 +1348,25 @@ body {
 
   .hamburger { display: flex; }
 
+  #nav-dashboard-btn { display: none; }
+
+  .nav-mobile-dashboard {
+    display: block;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-mobile-dashboard .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .features-grid { grid-template-columns: 1fr; }
   .feature-card--large { grid-column: 1; }
 
   .hero {
-    padding: calc(var(--navbar-h) + 48px) 20px 32px 20px;
+    padding: calc(var(--navbar-h) + 72px) 20px 32px 20px;
     text-align: center;
     justify-content: center;
     min-height: auto;
