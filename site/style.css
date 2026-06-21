@@ -213,6 +213,11 @@ body {
   box-shadow: none;
 }
 
+#hero-features-btn {
+  background: rgba(255, 253, 250, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-secondary);
