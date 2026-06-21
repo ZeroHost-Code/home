@@ -211,6 +211,8 @@ body {
   background: rgba(67, 59, 50, 0.5);
   border: 1px solid #433b32;
   box-shadow: none;
+  padding: 4px 16px;
+  font-size: 0.82rem;
 }
 
 #hero-features-btn {
