@@ -133,6 +133,8 @@ body {
   background: linear-gradient(90deg, rgba(238, 129, 50, 0) 0%, rgba(238, 129, 50, 0.3) 50%, rgba(238, 129, 50, 0) 100%);
   border: none;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 /* ---------- GRADIENT TEXT ---------- */
