@@ -283,8 +283,13 @@ body {
   border-radius: 14px;
 }
 
-.navbar.scrolled .nav-container {
+.navbar.scrolled .logo,
+.navbar.scrolled .nav-links {
   transform: translateX(-30px);
+}
+
+.navbar.scrolled .nav-actions {
+  transform: translateX(30px);
 }
 
 .nav-container {
@@ -295,7 +300,6 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
-  transition: transform var(--transition);
 }
 
 .logo {
@@ -304,6 +308,7 @@ body {
   gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
+  transition: transform var(--transition);
 }
 
 .logo-icon { display: flex; }
@@ -322,6 +327,7 @@ body {
   display: flex;
   gap: 8px;
   flex: 1;
+  transition: transform var(--transition);
 }
 
 .nav-link {
@@ -339,7 +345,7 @@ body {
   background: rgba(238, 129, 50, 0.1);
 }
 
-.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-actions { display: flex; align-items: center; gap: 12px; transition: transform var(--transition); }
 
 .hamburger {
   display: none;
