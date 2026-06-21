@@ -208,8 +208,8 @@ body {
 }
 
 #nav-dashboard-btn {
-  background: #433b32;
-  border: 1px solid #fff1e0;
+  background: rgba(67, 59, 50, 0.5);
+  border: 1px solid #433b32;
 }
 
 .btn-ghost {
