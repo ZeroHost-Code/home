@@ -354,7 +354,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: calc(var(--navbar-h) + 40px) 24px 80px;
+  padding: calc(var(--navbar-h) + 40px) 80px 80px clamp(200px, 15vw, 380px);
   overflow: hidden;
 }
 
@@ -386,7 +386,7 @@ body {
   z-index: 1;
   max-width: 820px;
   margin: 0;
-  padding-left: 380px;
+  width: 100%;
 }
 
 .hero-badge {
