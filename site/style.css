@@ -216,14 +216,16 @@ body {
 .btn:hover::after { opacity: 1; }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(180deg, #433b32 0%, #29241f 100%);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(238, 129, 50, 0.35);
+  border: 1px solid rgba(255, 237, 217, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(238, 129, 50, 0.5);
+  box-shadow: 0 8px 32px rgba(238, 129, 50, 0.25);
+  border-color: rgba(238, 129, 50, 0.4);
 }
 
 #nav-dashboard-btn {
@@ -234,29 +236,18 @@ body {
   font-size: 0.82rem;
 }
 
-#hero-features-btn {
-  background: rgba(255, 253, 250, 0.1);
+.btn-ghost {
+  background: rgba(255, 253, 250, 0.08);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#hero-dashboard-btn {
-  background: linear-gradient(180deg, #433b32 0%, #29241f 100%);
-  border: 1px solid rgba(255, 237, 217, 0.2);
-  box-shadow: none;
-}
-
-.btn-ghost {
-  background: transparent;
   color: var(--text-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-ghost:hover {
   color: var(--text-primary);
-  border-color: var(--border-hover);
-  background: rgba(238, 129, 50, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 253, 250, 0.14);
   transform: translateY(-2px);
 }
 
@@ -402,7 +393,20 @@ body {
   background: #000;
 }
 
-
+/* Grid CSS background for hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(238, 129, 50, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238, 129, 50, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, black 30%, transparent 80%);
+}
 
 .hero-content {
   position: relative;
