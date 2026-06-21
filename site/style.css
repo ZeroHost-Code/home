@@ -390,7 +390,6 @@ body {
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   align-items: center;
@@ -1310,6 +1309,7 @@ body {
 
   .hero {
     padding: calc(var(--navbar-h) + 72px) 48px 60px clamp(200px, 18vw, 400px);
+    min-height: auto;
   }
 
   .hero-title {
