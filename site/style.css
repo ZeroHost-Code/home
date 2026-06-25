@@ -122,8 +122,15 @@ body {
 .terminal-section,
 .pricing,
 .faq,
-.cta-section {
+.cta-section,
+.pterodactyl-section,
+.discord-section {
   background: #000;
+}
+
+/* --- Pterodactyl section: 2x2 grid --- */
+.pterodactyl-section .features-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* ---------- SECTION DIVIDER ---------- */
