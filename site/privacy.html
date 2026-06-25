@@ -142,55 +142,65 @@
       <p>ZeroHost ("we", "us", "our") is a community project providing free hosting services. This Privacy Policy explains how we handle information when you use our free hosting website at <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer">dashboard.zero-host.org</a> and related services.</p>
 
       <h2>2. Data We Collect on Our Free Hosting Platform</h2>
-      <p>We collect minimal data. Here is what may be collected:</p>
+      <p>We collect minimal data necessary to operate the service. Here is what may be collected:</p>
       <ul>
-        <li><strong>Account Information:</strong> When you register on our Pterodactyl panel, we collect your email address and username. This data is necessary to provide the service.</li>
-        <li><strong>Server Data:</strong> Files and configurations you upload to your hosted servers are stored on our infrastructure.</li>
-        <li><strong>Logs:</strong> Server access logs and error logs may be retained for security and debugging purposes.</li>
+        <li><strong>Account Information:</strong> When you register on our dashboard, we collect your email address, username, and a securely hashed password (argon2id). This data is necessary to provide the service.</li>
+        <li><strong>IP Address:</strong> Your IP address is collected and stored at registration and used for VPN/proxy detection (via ip-api.com), abuse prevention (max 2 accounts per IP), and security auditing. IPs are stored in a dedicated table linked to your account.</li>
+        <li><strong>Activity Logs:</strong> We log all significant account actions for security and debugging: account creation, server creation/renewal/rename/reinstall/deletion, password changes, email changes, API key updates, and account deletion. Each log entry includes a timestamp and may reference the affected server.</li>
+        <li><strong>Server Data:</strong> Server names, egg type selections, environment variables, and allocation details are stored on our infrastructure. Server files you upload are stored on the panel.</li>
+        <li><strong>Pyrodactyl Client API Key:</strong> Optionally, you may provide a Pyrodactyl Client API key (stored in our database) to enable live resource monitoring in the dashboard.</li>
+        <li><strong>Browser Local Storage:</strong> We store your JWT session token, user profile data, cookie consent preferences, and sidebar UI preferences (collapsed state, width) in your browser's localStorage. These are not sent to external servers.</li>
+        <li><strong>Server Meta Data:</strong> For each server you create, we store creation date, expiration date (90-day lifecycle), and status (active/suspended/expired) to manage renewals and auto-suspension.</li>
       </ul>
 
       <h2>3. Cookies and Third-Party Services</h2>
       <p>Our website uses the following external resources that may set cookies or collect data:</p>
       <ul>
-        <li><strong>Google Fonts:</strong> When you accept, fonts are loaded from Google's servers. Google may collect your IP address and browser information. You can decline this loading via the cookie consent banner.</li>
-        <li><strong>CDN Resources:</strong> Static assets (icons, images) are loaded from third-party CDNs (jsdelivr, SimpleIcons). These may log your IP address temporarily.</li>
+        <li><strong>Cap (CAPTCHA):</strong> We use Cap at <a href="https://cap.zero-host.org" target="_blank" rel="noopener noreferrer">cap.zero-host.org</a> for security checks during login and registration. Cap may collect browser fingerprint data and IP address.</li>
+        <li><strong>ip-api.com:</strong> Used during registration and login to detect VPNs and proxies. Your IP address is sent to ip-api.com for this check; no data is stored by them beyond the request.</li>
+        <li><strong>Gravatar:</strong> Your email address is MD5-hashed and sent to Gravatar to display your avatar in the dashboard sidebar. This is a privacy-preserving lookup (hash only, not the raw email).</li>
+        <li><strong>Google Fonts:</strong> Fonts may be loaded from Google's servers. Google may collect your IP address and browser information.</li>
+        <li><strong>CDN Resources:</strong> Static assets (cap-widget library) are loaded from jsdelivr CDN. These may log your IP address temporarily.</li>
+        <li><strong>JWT Token Cookie:</strong> An httpOnly, secure, same-site cookie is set after login to maintain your authenticated session. This cookie expires after 2 hours.</li>
       </ul>
-      <p>We do not use Google Analytics, Facebook Pixel, or any other tracking tools.</p>
+      <p>We do not use Google Analytics, Facebook Pixel, or any other tracking or advertising tools on the dashboard.</p>
 
       <h2>4. How We Use Your Data</h2>
       <p>We use the collected data solely for:</p>
       <ul>
-        <li>Providing and maintaining the hosting service</li>
+        <li>Providing and maintaining the hosting service (account management, server deployment, renewals)</li>
         <li>Communicating with you about your account</li>
-        <li>Ensuring security and preventing abuse</li>
+        <li>Ensuring security and preventing abuse (VPN/proxy detection, IP-based rate limiting, activity auditing)</li>
         <li>Improving our service</li>
       </ul>
 
       <h2>5. Data Retention</h2>
-      <p>We retain your data for as long as your account is active. If you delete your account, your personal data and server files will be removed within 30 days.</p>
+      <p>We retain your personal data for as long as your account is active. Activity logs are retained for the lifetime of your account. IP addresses are stored until account deletion. If you delete your account, all associated data (user record, IPs, activity logs, server metadata) is immediately removed from our database. Server files on the panel are deleted as part of the account deletion process. We do not retain any data after account deletion.</p>
 
       <h2>6. Data Sharing</h2>
       <p>We do not sell, trade, or share your personal data with third parties, except:</p>
       <ul>
+        <li><strong>Service Providers:</strong> Your data (email, username, password) is shared with the Pyrodactyl panel API to create and manage your hosting account and servers.</li>
+        <li><strong>Security Services:</strong> Your IP address is sent to ip-api.com for VPN/proxy detection during login and registration. Your email address (MD5-hashed) is sent to Gravatar for avatar display.</li>
         <li>When required by law or legal process</li>
         <li>To protect the rights and safety of ZeroHost and its users</li>
-        <li>With service providers who assist in operating our infrastructure (under strict data processing agreements)</li>
+        <li>With other service providers who assist in operating our infrastructure (under strict data processing agreements)</li>
       </ul>
 
       <h2>7. Your Rights (GDPR)</h2>
       <p>If you are in the European Economic Area (EEA), you have the following rights:</p>
       <ul>
-        <li><strong>Right of Access:</strong> Request a copy of the data we hold about you.</li>
-        <li><strong>Right to Rectification:</strong> Request correction of inaccurate data.</li>
-        <li><strong>Right to Erasure:</strong> Request deletion of your data.</li>
-        <li><strong>Right to Data Portability:</strong> Request your data in a machine-readable format.</li>
+        <li><strong>Right of Access (Art. 15):</strong> Request a copy of the data we hold about you. You can export your data directly from the dashboard (Account > Dangerous Zone & Export Account Data).</li>
+        <li><strong>Right to Rectification (Art. 16):</strong> Request correction of inaccurate data. You can update your email and password from the dashboard (Account > Change Account Info).</li>
+        <li><strong>Right to Erasure (Art. 17):</strong> Request deletion of your data. You can delete your account directly from the dashboard (Account > Dangerous Zone > Delete My Account).</li>
+        <li><strong>Right to Data Portability (Art. 20):</strong> Request your data in a machine-readable format (JSON export available in Account > Dangerous Zone).</li>
         <li><strong>Right to Object:</strong> Object to the processing of your data.</li>
-        <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time (e.g., via Cookie Settings).</li>
+        <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time via the cookie banner or by clearing your browser's local storage.</li>
       </ul>
-      <p>To exercise these rights, contact us at the address below.</p>
+      <p>To exercise these rights, contact us at the address below or use the self-service tools available in your dashboard.</p>
 
       <h2>8. Data Security on Free Hosting</h2>
-      <p>We implement appropriate security measures to protect your free hosting data, including encrypted connections (HTTPS), regular backups, and access controls on our infrastructure.</p>
+      <p>We implement appropriate security measures to protect your free hosting data, including encrypted connections (HTTPS), JWT token authentication with short expiry (2h), rate limiting on sensitive endpoints, HTTP-only secure cookies, passwords hashed with argon2id, and regular backups.</p>
 
       <h2>9. Children's Privacy</h2>
       <p>Our services are not directed to individuals under 16. We do not knowingly collect data from children.</p>
@@ -199,7 +209,7 @@
       <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
 
       <h2>11. Contact</h2>
-      <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us via our <a href="https://status.zero-host.org" target="_blank" rel="noopener noreferrer">status page</a> or through the Pterodactyl panel.</p>
+      <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us via our <a href="https://status.zero-host.org" target="_blank" rel="noopener noreferrer">status page</a> or through the dashboard.</p>
     </div>
   </main>
 
