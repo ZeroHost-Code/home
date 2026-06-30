@@ -255,7 +255,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   var words = [
     'NodeJS', 'Rust', 'Python', 'Java',
     'Uptime Kuma', 'Gitea', 'Forgejo', 'MariaDB',
-    'Discord Bots'
+    'Discord Bots', 'Minecraft'
   ];
 
   var wrapA = document.getElementById('wrap-a');
