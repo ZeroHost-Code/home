@@ -1312,7 +1312,7 @@ body::after {
 
 @media (max-width: 1400px) {
   .hero {
-    padding: calc(var(--navbar-h) + 280px) 48px 60px clamp(200px, 18vw, 400px);
+    padding: calc(var(--navbar-h) + 40vh) 48px 60px clamp(200px, 18vw, 400px);
     min-height: 100dvh;
     align-items: flex-start;
   }
