@@ -91,21 +91,6 @@ body::after {
   background-size: 512px 512px;
 }
 
-/* --- Grid background overlay (reusable) --- */
-.section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(238, 129, 50, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(238, 129, 50, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 20%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 20%, transparent 75%);
-}
-
 /* --- Sections inherit body background --- */
 
 /* --- Hydrodactyl section: text + image --- */
