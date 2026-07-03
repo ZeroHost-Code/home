@@ -108,31 +108,31 @@ body::after {
 
 /* --- Sections inherit body background --- */
 
-/* --- Pterodactyl section: text + image --- */
-.pterodactyl-layout {
+/* --- Hydrodactyl section: text + image --- */
+.hydrodactyl-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
 }
 
-.pterodactyl-text .section-tag {
+.hydrodactyl-text .section-tag {
   margin-bottom: 24px;
 }
 
-.pterodactyl-text .section-title {
+.hydrodactyl-text .section-title {
   text-align: left;
   margin-bottom: 20px;
 }
 
-.pterodactyl-desc {
+.hydrodactyl-desc {
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.75;
   max-width: 480px;
 }
 
-.pterodactyl-image img {
+.hydrodactyl-image img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-xl);
@@ -1353,16 +1353,16 @@ body::after {
     gap: 32px;
   }
 
-  .pterodactyl-layout {
+  .hydrodactyl-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .pterodactyl-text .section-title {
+  .hydrodactyl-text .section-title {
     text-align: center;
   }
 
-  .pterodactyl-desc {
+  .hydrodactyl-desc {
     text-align: center;
     margin: 0 auto;
   }
