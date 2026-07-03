@@ -398,7 +398,7 @@ body::after {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: calc(var(--navbar-h) - 10px) 80px 80px clamp(320px, 22vw, 520px);
+  padding: calc(var(--navbar-h) + 96px) 80px 80px clamp(320px, 22vw, 520px);
   overflow: hidden;
 }
 
@@ -1410,7 +1410,7 @@ body::after {
   .feature-card--large { grid-column: 1; }
 
   .hero {
-    padding: calc(var(--navbar-h) + 96px) 20px 32px 20px;
+    padding: calc(var(--navbar-h) + 120px) 20px 60px 20px;
     text-align: center;
     justify-content: center;
     min-height: auto;
