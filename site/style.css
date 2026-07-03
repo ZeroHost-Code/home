@@ -1410,7 +1410,7 @@ body::after {
   .feature-card--large { grid-column: 1; }
 
   .hero {
-    padding: calc(var(--navbar-h) + 120px) 20px 60px 20px;
+    padding: calc(var(--navbar-h) + 20vh) 20px 32px 20px;
     text-align: center;
     justify-content: center;
     min-height: auto;
