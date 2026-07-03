@@ -12,7 +12,7 @@
 
 :root {
   /* Colors */
-  --bg-primary:    #110f0d;
+  --bg-primary:    #000;
   --bg-secondary:  #1c1917;
   --bg-card:       #1c1917;
   --bg-card-hover: #292524;
@@ -66,15 +66,6 @@ body {
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb { background: var(--accent-1); border-radius: 99px; }
 
-/* ---------- CANVAS PARTICLES ---------- */
-#particles-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
 /* ---------- LAYOUT ---------- */
 .container {
   max-width: 1200px;
@@ -88,13 +79,12 @@ body {
   padding: 100px 0;
 }
 
-/* --- Noise texture overlay (reusable) --- */
-.section::after,
-.hero::after {
+/* --- Noise texture overlay (full page) --- */
+body::after {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -116,28 +106,44 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 20%, transparent 75%);
 }
 
-/* --- Fonds uniformes (pure black like hero) --- */
-.features,
-.supported,
-.terminal-section,
-.pricing,
-.faq,
-.cta-section,
-.pterodactyl-section,
-.discord-section {
-  background: #000;
+/* --- Sections inherit body background --- */
+
+/* --- Pterodactyl section: text + image --- */
+.pterodactyl-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
-/* --- Pterodactyl section: 2x2 grid --- */
-.pterodactyl-section .features-grid {
-  grid-template-columns: repeat(2, 1fr);
+.pterodactyl-text .section-tag {
+  margin-bottom: 24px;
+}
+
+.pterodactyl-text .section-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.pterodactyl-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+.pterodactyl-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
 }
 
 /* ---------- SECTION DIVIDER ---------- */
 .section-divider {
   width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(238, 129, 50, 0) 0%, rgba(238, 129, 50, 0.3) 50%, rgba(238, 129, 50, 0) 100%);
+  height: 2px;
+  background: var(--bg-card);
   border: none;
   margin: 0;
   position: relative;
@@ -393,7 +399,6 @@ body {
   text-align: left;
   padding: calc(var(--navbar-h) - 10px) 80px 80px clamp(320px, 22vw, 520px);
   overflow: hidden;
-  background: #000;
 }
 
 /* Grid CSS background for hero */
@@ -1052,13 +1057,11 @@ body {
 .cta-box {
   position: relative;
   text-align: center;
-  background: linear-gradient(180deg, rgba(28, 25, 23, 0.6) 0%, rgba(50, 48, 46, 0.5) 100%);
+  background: var(--bg-card);
   border: 1px solid rgba(238, 129, 50, 0.3);
   border-radius: var(--radius-xl);
   padding: 80px 40px;
   overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .cta-glow {
@@ -1348,6 +1351,20 @@ body {
 
   .footer-links {
     gap: 32px;
+  }
+
+  .pterodactyl-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pterodactyl-text .section-title {
+    text-align: center;
+  }
+
+  .pterodactyl-desc {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 

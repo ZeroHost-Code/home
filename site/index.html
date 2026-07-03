@@ -235,9 +235,6 @@
 </head>
 <body>
 
-  <!-- ===== CANVAS PARTICLES ===== -->
-  <canvas id="particles-canvas"></canvas>
-
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
@@ -549,125 +546,16 @@
 
   <div class="section-divider"></div>
 
-  <!-- ===== PRICING ===== -->
-  <section class="section pricing" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Free Hosting Pricing</span>
-        <h2 class="section-title">One single plan.<br /><span class="gradient-text">Completely free.</span></h2>
-        <p class="section-subtitle">No hidden tiers, no extra fees, no surprises. Free hosting with 400+ Mbit/s forever.</p>
-      </div>
-
-      <div class="pricing-center">
-        <div class="pricing-card" id="pricing-card">
-          <div class="pricing-glow"></div>
-          <div class="pricing-badge-top">⭐ Single Plan</div>
-          <div class="pricing-name">Free Forever</div>
-          <div class="pricing-price">
-            <span class="price-amount">0</span>
-            <span class="price-currency">$</span>
-            <span class="price-period">/ month</span>
-          </div>
-          <p class="pricing-desc">Everything you need to host your projects without time limits.</p>
-
-          <ul class="pricing-features">
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              Access to Pterodactyl panel
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              NodeJS, Python, Java, Rust…
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              50% CPU
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              512MiB RAM
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              3GB Disk
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              400+ Mbit/s bandwidth
-            </li>
-            <li class="pricing-feature">
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
-              No credit card required
-            </li>
-          </ul>
-
-          <a href="https://dashboard.zero-host.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full" id="pricing-cta-btn">
-            Get started for free
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
   <!-- ===== POWERED BY PTERODACTYL ===== -->
   <section class="section pterodactyl-section" id="pterodactyl">
-    <div class="container">
-      <div class="section-header">
+    <div class="container pterodactyl-layout">
+      <div class="pterodactyl-text">
         <span class="section-tag">Server Management</span>
         <h2 class="section-title">Powered by <span class="gradient-text">Pterodactyl</span></h2>
-        <p class="section-subtitle">Industry-leading open-source panel for managing your free servers with ease.</p>
+        <p class="pterodactyl-desc">Industry-leading open-source panel for managing your free servers with ease. A robust control panel at your fingertips for free game server management.</p>
       </div>
-
-      <div class="features-grid">
-        <div class="feature-card" id="pterodactyl-panel">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="2" y="2" width="20" height="20" rx="3"/>
-              <path d="M7 8l4 4-4 4M13 16h4"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Web-Based Panel</h3>
-          <p class="feature-desc">Manage your entire free server from a clean, intuitive web interface. No CLI required.</p>
-        </div>
-
-        <div class="feature-card" id="pterodactyl-console">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M4 17l6-6-6-6M12 19h8"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Real-Time Console</h3>
-          <p class="feature-desc">Live terminal access to your server with instant output and command execution.</p>
-        </div>
-
-        <div class="feature-card" id="pterodactyl-files">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-              <path d="M14 2v6h6"/>
-              <path d="M12 18v-6M9 15l3-3 3 3"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">File Manager</h3>
-          <p class="feature-desc">Upload, edit, and organize files directly from your browser with drag-and-drop support.</p>
-        </div>
-
-        <div class="feature-card" id="pterodactyl-monitoring">
-          <div class="feature-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Resource Monitoring</h3>
-          <p class="feature-desc">Track CPU, RAM, and disk usage in real-time directly from your Pterodactyl panel.</p>
-        </div>
-
-
+      <div class="pterodactyl-image">
+        <img src="https://img.zero-host.org/assets/pyro.png" alt="Pterodactyl Panel" loading="lazy">
       </div>
     </div>
   </section>
