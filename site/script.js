@@ -351,4 +351,20 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 })();
 
+/* ---------- ROUGH NOTATION UNDERLINE ---------- */
+(function () {
+  const heroHighlight = document.getElementById('hero-highlight');
+  if (!heroHighlight || typeof RoughNotation === 'undefined') return;
+
+  const annotation = RoughNotation.annotate(heroHighlight, {
+    type: 'underline',
+    color: '#ee8132',
+    strokeWidth: 2.5,
+    padding: 4,
+    iterations: 2,
+    animationDuration: 800
+  });
+  annotation.show();
+})();
+
 
