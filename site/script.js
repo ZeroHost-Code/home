@@ -354,17 +354,29 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* ---------- ROUGH NOTATION UNDERLINE ---------- */
 (function () {
   const heroHighlight = document.getElementById('hero-highlight');
-  if (!heroHighlight || typeof RoughNotation === 'undefined') return;
+  if (heroHighlight && typeof RoughNotation !== 'undefined') {
+    const annotation = RoughNotation.annotate(heroHighlight, {
+      type: 'underline',
+      color: '#ee8132',
+      strokeWidth: 2.5,
+      padding: 4,
+      iterations: 2,
+      animationDuration: 800
+    });
+    annotation.show();
+  }
 
-  const annotation = RoughNotation.annotate(heroHighlight, {
-    type: 'underline',
-    color: '#ee8132',
-    strokeWidth: 2.5,
-    padding: 4,
-    iterations: 2,
-    animationDuration: 800
-  });
-  annotation.show();
+  const featuresHighlight = document.getElementById('features-highlight');
+  if (featuresHighlight && typeof RoughNotation !== 'undefined') {
+    const highlight = RoughNotation.annotate(featuresHighlight, {
+      type: 'highlight',
+      color: 'rgba(238, 129, 50, 0.2)',
+      strokeWidth: 12,
+      padding: 2,
+      animationDuration: 600
+    });
+    highlight.show();
+  }
 })();
 
 
