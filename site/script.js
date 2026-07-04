@@ -8,7 +8,7 @@
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 30);
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 })();
 
@@ -332,6 +332,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   } else if (!consent) {
     showBanner();
   }
+})();
+
+/* ---------- INTERSECTION + SYMBOLS ---------- */
+(function () {
+  const dividers = document.querySelectorAll('.section-divider');
+
+  dividers.forEach(divider => {
+    const leftPlus = document.createElement('span');
+    leftPlus.className = 'intersection-plus';
+    leftPlus.style.left = 'calc(50% - 600px)';
+    divider.appendChild(leftPlus);
+
+    const rightPlus = document.createElement('span');
+    rightPlus.className = 'intersection-plus';
+    rightPlus.style.left = 'calc(50% + 600px)';
+    divider.appendChild(rightPlus);
+  });
 })();
 
 
