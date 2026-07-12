@@ -317,121 +317,291 @@
   <section class="section supported" id="supported">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Supported Technologies</span>
         <h2 class="section-title">What you can<br /><span class="gradient-text">host for free</span></h2>
-        <p class="section-subtitle">Preconfigured free hosting environments for NodeJS, Python, Java, Rust, Minecraft Server, MariaDB, MongoDB and more — ready to deploy.</p>
       </div>
 
-      <div class="tech-grid">
-
-        <div class="tech-card" id="tech-nodejs">
-          <div class="tech-icon tech-icon--green" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Free Node.js hosting - ZeroHost" width="48" height="48" loading="lazy">
+      <div class="tech-marquee">
+        <div class="tech-marquee__row tech-marquee__row--left">
+          <div class="tech-marquee__track">
+            <div class="tech-card" id="tech-nodejs">
+              <div class="tech-icon tech-icon--green" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Free Node.js hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Node.js</h4>
+              <p class="tech-desc">Free NodeJS hosting for Discord bots, REST APIs, Express apps, Next.js, and more.</p>
+              <div class="tech-badge">JavaScript / TypeScript</div>
+            </div>
+            <div class="tech-card" id="tech-python">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Free Python hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Python</h4>
+              <p class="tech-desc">Free Python hosting for scripts, bots, Flask/FastAPI APIs, scraping, automation and AI.</p>
+              <div class="tech-badge">Python 3.x</div>
+            </div>
+            <div class="tech-card" id="tech-java">
+              <div class="tech-icon tech-icon--orange" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Free Java hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Java</h4>
+              <p class="tech-desc">Free Java hosting for Minecraft servers, Spring Boot APIs, JVM applications of all kinds.</p>
+              <div class="tech-badge">JDK 11 / 17 / 21</div>
+            </div>
+            <div class="tech-card" id="tech-rust">
+              <div class="tech-icon tech-icon--red" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/rust/ffffff" alt="Free Rust hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Rust</h4>
+              <p class="tech-desc">Free Rust hosting for high-performance services, Actix/Axum APIs, compiled system tools.</p>
+              <div class="tech-badge">Stable / Nightly</div>
+            </div>
+            <div class="tech-card" id="tech-uptime">
+              <div class="tech-icon tech-icon--teal" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/uptimekuma/5cdd8b" alt="Free Uptime Kuma hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Uptime Kuma</h4>
+              <p class="tech-desc">Free Uptime Kuma hosting for service monitoring, custom alerts and public status page.</p>
+              <div class="tech-badge">Self-hosted</div>
+            </div>
+            <div class="tech-card" id="tech-gitea">
+              <div class="tech-icon tech-icon--purple" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/gitea/609926" alt="Free Gitea hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Gitea</h4>
+              <p class="tech-desc">Free Gitea hosting: your own Git forge with repositories, CI/CD, issues, pull requests.</p>
+              <div class="tech-badge">Self-hosted Git</div>
+            </div>
           </div>
-          <h4 class="tech-name">Node.js</h4>
-          <p class="tech-desc">Free NodeJS hosting for Discord bots, REST APIs, Express apps, Next.js, and more.</p>
-          <div class="tech-badge">JavaScript / TypeScript</div>
+          <div class="tech-marquee__track" aria-hidden="true">
+            <div class="tech-card" id="tech-nodejs-dup">
+              <div class="tech-icon tech-icon--green" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Node.js</h4>
+              <p class="tech-desc">Free NodeJS hosting for Discord bots, REST APIs, Express apps, Next.js, and more.</p>
+              <div class="tech-badge">JavaScript / TypeScript</div>
+            </div>
+            <div class="tech-card" id="tech-python-dup">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Python</h4>
+              <p class="tech-desc">Free Python hosting for scripts, bots, Flask/FastAPI APIs, scraping, automation and AI.</p>
+              <div class="tech-badge">Python 3.x</div>
+            </div>
+            <div class="tech-card" id="tech-java-dup">
+              <div class="tech-icon tech-icon--orange" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Java</h4>
+              <p class="tech-desc">Free Java hosting for Minecraft servers, Spring Boot APIs, JVM applications of all kinds.</p>
+              <div class="tech-badge">JDK 11 / 17 / 21</div>
+            </div>
+            <div class="tech-card" id="tech-rust-dup">
+              <div class="tech-icon tech-icon--red" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/rust/ffffff" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Rust</h4>
+              <p class="tech-desc">Free Rust hosting for high-performance services, Actix/Axum APIs, compiled system tools.</p>
+              <div class="tech-badge">Stable / Nightly</div>
+            </div>
+            <div class="tech-card" id="tech-uptime-dup">
+              <div class="tech-icon tech-icon--teal" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/uptimekuma/5cdd8b" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Uptime Kuma</h4>
+              <p class="tech-desc">Free Uptime Kuma hosting for service monitoring, custom alerts and public status page.</p>
+              <div class="tech-badge">Self-hosted</div>
+            </div>
+            <div class="tech-card" id="tech-gitea-dup">
+              <div class="tech-icon tech-icon--purple" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/gitea/609926" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Gitea</h4>
+              <p class="tech-desc">Free Gitea hosting: your own Git forge with repositories, CI/CD, issues, pull requests.</p>
+              <div class="tech-badge">Self-hosted Git</div>
+            </div>
+          </div>
         </div>
 
-        <div class="tech-card" id="tech-python">
-          <div class="tech-icon tech-icon--blue" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Free Python hosting - ZeroHost" width="48" height="48" loading="lazy">
+        <div class="tech-marquee__row tech-marquee__row--right">
+          <div class="tech-marquee__track">
+            <div class="tech-card" id="tech-forgejo">
+              <div class="tech-icon tech-icon--orange" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/forgejo/fb923c" alt="Free Forgejo hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Forgejo</h4>
+              <p class="tech-desc">Free Forgejo hosting: a community-managed lightweight software forge, fork of Gitea.</p>
+              <div class="tech-badge">Self-hosted Git</div>
+            </div>
+            <div class="tech-card" id="tech-bun">
+              <div class="tech-icon tech-icon--pink" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="Free Bun hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Bun</h4>
+              <p class="tech-desc">Free Bun hosting for blazing fast JavaScript/TypeScript runtime, bundler, test runner and package manager.</p>
+              <div class="tech-badge">JavaScript / TypeScript</div>
+            </div>
+            <div class="tech-card" id="tech-codeserver">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Free Code-Server hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Code-Server</h4>
+              <p class="tech-desc">Free Code-Server hosting: VS Code in the browser with full IDE features, extensions and terminal.</p>
+              <div class="tech-badge">Cloud IDE</div>
+            </div>
+            <div class="tech-card" id="tech-minecraft">
+              <div class="tech-icon tech-icon--green" style="background: transparent;">
+                <img src="https://cdn.brandfetch.io/id6MqO-ovf/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1667561785221" alt="Free Minecraft Server hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Minecraft Server</h4>
+              <p class="tech-desc">Free Minecraft Server hosting for Vanilla, Paper, Spigot, modded and all your favourite game modes.</p>
+              <div class="tech-badge">Java Edition</div>
+            </div>
+            <div class="tech-card" id="tech-mariadb">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" alt="Free MariaDB hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">MariaDB</h4>
+              <p class="tech-desc">Free MariaDB hosting for relational databases, web apps, and high-performance data storage.</p>
+              <div class="tech-badge">SQL Database</div>
+            </div>
+            <div class="tech-card" id="tech-mongodb">
+              <div class="tech-icon tech-icon--teal" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="Free MongoDB hosting - ZeroHost" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">MongoDB</h4>
+              <p class="tech-desc">Free MongoDB hosting for NoSQL databases, real-time apps, and flexible document storage.</p>
+              <div class="tech-badge">NoSQL Database</div>
+            </div>
           </div>
-          <h4 class="tech-name">Python</h4>
-          <p class="tech-desc">Free Python hosting for scripts, bots, Flask/FastAPI APIs, scraping, automation and AI.</p>
-          <div class="tech-badge">Python 3.x</div>
+          <div class="tech-marquee__track" aria-hidden="true">
+            <div class="tech-card" id="tech-forgejo-dup">
+              <div class="tech-icon tech-icon--orange" style="background: transparent;">
+                <img src="https://cdn.simpleicons.org/forgejo/fb923c" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Forgejo</h4>
+              <p class="tech-desc">Free Forgejo hosting: a community-managed lightweight software forge, fork of Gitea.</p>
+              <div class="tech-badge">Self-hosted Git</div>
+            </div>
+            <div class="tech-card" id="tech-bun-dup">
+              <div class="tech-icon tech-icon--pink" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Bun</h4>
+              <p class="tech-desc">Free Bun hosting for blazing fast JavaScript/TypeScript runtime, bundler, test runner and package manager.</p>
+              <div class="tech-badge">JavaScript / TypeScript</div>
+            </div>
+            <div class="tech-card" id="tech-codeserver-dup">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Code-Server</h4>
+              <p class="tech-desc">Free Code-Server hosting: VS Code in the browser with full IDE features, extensions and terminal.</p>
+              <div class="tech-badge">Cloud IDE</div>
+            </div>
+            <div class="tech-card" id="tech-minecraft-dup">
+              <div class="tech-icon tech-icon--green" style="background: transparent;">
+                <img src="https://cdn.brandfetch.io/id6MqO-ovf/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1667561785221" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">Minecraft Server</h4>
+              <p class="tech-desc">Free Minecraft Server hosting for Vanilla, Paper, Spigot, modded and all your favourite game modes.</p>
+              <div class="tech-badge">Java Edition</div>
+            </div>
+            <div class="tech-card" id="tech-mariadb-dup">
+              <div class="tech-icon tech-icon--blue" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">MariaDB</h4>
+              <p class="tech-desc">Free MariaDB hosting for relational databases, web apps, and high-performance data storage.</p>
+              <div class="tech-badge">SQL Database</div>
+            </div>
+            <div class="tech-card" id="tech-mongodb-dup">
+              <div class="tech-icon tech-icon--teal" style="background: transparent;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="48" height="48" loading="lazy">
+              </div>
+              <h4 class="tech-name">MongoDB</h4>
+              <p class="tech-desc">Free MongoDB hosting for NoSQL databases, real-time apps, and flexible document storage.</p>
+              <div class="tech-badge">NoSQL Database</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== ONE CLICK DEPLOY ===== -->
+  <section class="section one-click" id="one-click">
+    <div class="container">
+      <div class="one-click__layout">
+        <div class="one-click__cta">
+          <h2 class="one-click__title">Just one click away<br />from your <span class="gradient-text">free server</span></h2>
+          <p class="one-click__desc">Deploy your project in seconds. Pick a template, hit deploy, and your free server is live — no credit card, no hassle.</p>
+            <div class="one-click__btn-wrap">
+            <a href="#" class="btn btn-primary btn-lg one-click__btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+              Deploy Now
+            </a>
+              <svg class="one-click__cursor-trail" width="310" height="100" viewBox="0 0 310 100" fill="none" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+                <path d="M309.5 22l-10.447 11.822c-40.667 46.017-102.502 67.312-162.88 56.094a174.76 174.76 0 0 1-88.127-44.822L21.5 20" stroke="rgba(238,129,50,0.3)" stroke-dasharray="12 12" stroke-linecap="round" stroke-width="2" mask="url(#cursor-mask)"/>
+              <defs>
+                <mask id="cursor-mask">
+                  <rect width="100%" height="100%" fill="#000"/>
+                  <path stroke="#fff" stroke-dasharray="1" stroke-dashoffset="1" stroke-width="2" d="m309.5 2-10.447 31.822c-40.667 46.017-102.502 67.312-162.88 56.094a174.76 174.76 0 0 1-88.127-44.822L21.5 20" pathLength="1"/>
+                </mask>
+              </defs>
+            </svg>
+            <svg class="one-click__cursor-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="var(--color-brand-500)" d="M15.033 14.508c-.156-2.57 2.477-4.46 4.892-3.408l15.05 6.554.28.136c2.692 1.44 2.325 5.469-.583 6.4l-.3.082-6.803 1.587a.5.5 0 0 0-.258.153l-.061.083-3.595 6.177c-1.68 2.887-6.065 2.003-6.495-1.31L15.057 14.76l-.024-.252Z"/>
+            </svg>
+          </div>
         </div>
 
-        <div class="tech-card" id="tech-java">
-          <div class="tech-icon tech-icon--orange" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Free Java hosting - ZeroHost" width="48" height="48" loading="lazy">
+        <div class="one-click__cards">
+          <div class="deploy-card">
+            <div class="deploy-card__header">
+              <div class="deploy-card__icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" width="28" height="28" loading="lazy">
+              </div>
+              <span class="deploy-card__status deploy-card__status--running">Running</span>
+            </div>
+            <h4 class="deploy-card__name">My Discord Bot</h4>
+            <div class="deploy-card__badges">
+              <span class="deploy-card__badge">5GB Disk</span>
+              <span class="deploy-card__badge">256 MB RAM</span>
+            </div>
           </div>
-          <h4 class="tech-name">Java</h4>
-          <p class="tech-desc">Free Java hosting for Minecraft servers, Spring Boot APIs, JVM applications of all kinds.</p>
-          <div class="tech-badge">JDK 11 / 17 / 21</div>
-        </div>
 
-        <div class="tech-card" id="tech-rust">
-          <div class="tech-icon tech-icon--red" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/rust/ffffff" alt="Free Rust hosting - ZeroHost" width="48" height="48" loading="lazy">
+          <div class="deploy-card">
+            <div class="deploy-card__header">
+              <div class="deploy-card__icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="28" height="28" loading="lazy">
+              </div>
+              <span class="deploy-card__status deploy-card__status--running">Running</span>
+            </div>
+            <h4 class="deploy-card__name">FastAPI Backend</h4>
+            <div class="deploy-card__badges">
+              <span class="deploy-card__badge">5GB Disk</span>
+              <span class="deploy-card__badge">256 MB RAM</span>
+            </div>
           </div>
-          <h4 class="tech-name">Rust</h4>
-          <p class="tech-desc">Free Rust hosting for high-performance services, Actix/Axum APIs, compiled system tools.</p>
-          <div class="tech-badge">Stable / Nightly</div>
-        </div>
 
-        <div class="tech-card" id="tech-uptime">
-          <div class="tech-icon tech-icon--teal" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/uptimekuma/5cdd8b" alt="Free Uptime Kuma hosting - ZeroHost" width="48" height="48" loading="lazy">
+          <div class="deploy-card">
+            <div class="deploy-card__header">
+              <div class="deploy-card__icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" width="28" height="28" loading="lazy">
+              </div>
+              <span class="deploy-card__status deploy-card__status--running">Running</span>
+            </div>
+            <h4 class="deploy-card__name">Minecraft Server</h4>
+            <div class="deploy-card__badges">
+              <span class="deploy-card__badge">5GB Disk</span>
+              <span class="deploy-card__badge">256 MB RAM</span>
+            </div>
           </div>
-          <h4 class="tech-name">Uptime Kuma</h4>
-          <p class="tech-desc">Free Uptime Kuma hosting for service monitoring, custom alerts and public status page.</p>
-          <div class="tech-badge">Self-hosted</div>
         </div>
-
-        <div class="tech-card" id="tech-gitea">
-          <div class="tech-icon tech-icon--purple" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/gitea/609926" alt="Free Gitea hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">Gitea</h4>
-          <p class="tech-desc">Free Gitea hosting: your own Git forge with repositories, CI/CD, issues, pull requests.</p>
-          <div class="tech-badge">Self-hosted Git</div>
-        </div>
-
-        <div class="tech-card" id="tech-forgejo">
-          <div class="tech-icon tech-icon--orange" style="background: transparent;">
-            <img src="https://cdn.simpleicons.org/forgejo/fb923c" alt="Free Forgejo hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">Forgejo</h4>
-          <p class="tech-desc">Free Forgejo hosting: a community-managed lightweight software forge, fork of Gitea.</p>
-          <div class="tech-badge">Self-hosted Git</div>
-        </div>
-
-        <div class="tech-card" id="tech-bun">
-          <div class="tech-icon tech-icon--pink" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="Free Bun hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">Bun</h4>
-          <p class="tech-desc">Free Bun hosting for blazing fast JavaScript/TypeScript runtime, bundler, test runner and package manager.</p>
-          <div class="tech-badge">JavaScript / TypeScript</div>
-        </div>
-
-        <div class="tech-card" id="tech-codeserver">
-          <div class="tech-icon tech-icon--blue" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Free Code-Server hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">Code-Server</h4>
-          <p class="tech-desc">Free Code-Server hosting: VS Code in the browser with full IDE features, extensions and terminal.</p>
-          <div class="tech-badge">Cloud IDE</div>
-        </div>
-
-        <div class="tech-card" id="tech-minecraft">
-          <div class="tech-icon tech-icon--green" style="background: transparent;">
-            <img src="https://cdn.brandfetch.io/id6MqO-ovf/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1667561785221" alt="Free Minecraft Server hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">Minecraft Server</h4>
-          <p class="tech-desc">Free Minecraft Server hosting for Vanilla, Paper, Spigot, modded and all your favourite game modes.</p>
-          <div class="tech-badge">Java Edition</div>
-        </div>
-
-        <div class="tech-card" id="tech-mariadb">
-          <div class="tech-icon tech-icon--blue" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" alt="Free MariaDB hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">MariaDB</h4>
-          <p class="tech-desc">Free MariaDB hosting for relational databases, web apps, and high-performance data storage.</p>
-          <div class="tech-badge">SQL Database</div>
-        </div>
-
-        <div class="tech-card" id="tech-mongodb">
-          <div class="tech-icon tech-icon--teal" style="background: transparent;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="Free MongoDB hosting - ZeroHost" width="48" height="48" loading="lazy">
-          </div>
-          <h4 class="tech-name">MongoDB</h4>
-          <p class="tech-desc">Free MongoDB hosting for NoSQL databases, real-time apps, and flexible document storage.</p>
-          <div class="tech-badge">NoSQL Database</div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -442,7 +612,6 @@
   <section class="section features" id="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Free Hosting Features</span>
         <h2 class="section-title">Everything you need for<br /><span class="gradient-text" id="features-highlight">free hosting</span></h2>
         <p class="section-subtitle">A robust free hosting platform powered by Hydrodactyl to host your projects without limits.</p>
       </div>
@@ -513,7 +682,6 @@
     <div class="container">
       <div class="terminal-wrapper">
         <div class="terminal-sidebar">
-        <span class="section-tag">Free Server Management</span>
         <h2 class="section-title" style="text-align:left; margin-bottom: 1rem;">
           Manage your free server from<br /><span class="gradient-text">the console</span>
         </h2>
@@ -554,7 +722,6 @@
         <img src="https://img.zero-host.org/assets/pyro.png" alt="Hydrodactyl Panel" loading="lazy">
       </div>
       <div class="hydrodactyl-text">
-        <span class="section-tag">Server Management</span>
         <h2 class="section-title">Powered by <span class="gradient-text">Hydrodactyl</span></h2>
         <p class="hydrodactyl-desc">Industry-leading open-source panel for managing your free servers with ease. A robust control panel at your fingertips for free game server management.</p>
         <a href="https://hydrodactyl.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Learn more about Hydrodactyl →</a>
@@ -568,7 +735,6 @@
   <section class="section discord-section" id="discord-bot">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Discord Bot Hosting</span>
         <h2 class="section-title">Host Your Discord Bot <span class="gradient-text">For Free</span></h2>
         <p class="section-subtitle">Deploy and run your Discord bots 24/7 — completely free, no credit card needed.</p>
       </div>
@@ -622,7 +788,6 @@
   <section class="section faq" id="faq">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Free Hosting FAQ</span>
         <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
       </div>
 
