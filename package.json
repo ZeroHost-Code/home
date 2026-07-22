@@ -1,0 +1,17 @@
+{
+  "name": "zerohost",
+  "version": "1.0.0",
+  "description": "ZeroHost - Static site deployed on Vercel",
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site - no build required'",
+    "start": "npx serve public",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["static-site", "vercel", "hosting"],
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "vercel": "^32.0.0"
+  }
+}
